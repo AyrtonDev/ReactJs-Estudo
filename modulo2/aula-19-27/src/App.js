@@ -8,7 +8,7 @@ import Painel from './pages/Painel'
 import Login from './pages/Login'
 
 const isLooged = true
-const PrivateRoute = (children, ...rest)=>{
+const PrivateRoute = ({children, ...rest})=>{
   return(
     <Route {...rest}>
       {isLooged ? {children} : <Redirect to="/login"/>}
